@@ -13,9 +13,25 @@ body {
 #foto1, #foto2 {
     text-align: center;
 }
-p, #contador1, #contador2 {
+#contador1, #contador2 {
     text-align: center;
 }
+
+p {
+    text-align: center;
+    color: rgba(128, 128, 128, 0.555);
+}
+
+hr {
+    width: 50%;
+    margin: 20px auto;
+    margin-top: 20px;
+    margin-bottom: 20px;*/ /* Ajuste o valor conforme necessário
+    border: none; /* Remove a borda padrão */
+    height: 2px; /* Altura da linha */
+    background-color: gray; /* Cor da linha */
+}
+
 
     /* Estilo do coração */
     .heart {
