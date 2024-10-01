@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NossoAmor</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style-pag002.css">
+
+    <script>
+    function calcularDiferenca(inicio) {
+      const agora = new Date();
+      let diff = agora - inicio; // Diferença em milissegundos
+
+      // Calcula anos, meses, dias, horas, minutos e segundos
+      const anos = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+      diff -= anos * (1000 * 60 * 60 * 24 * 365);
+
+      const meses = Math.floor(diff / (1000 * 60 * 60 * 24 * 30));
+      diff -= meses * (1000 * 60 * 60 * 24 * 30);
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      diff -= dias * (1000 * 60 * 60 * 24);
+
+      const horas = Math.floor(diff / (1000 * 60 * 60));
+      diff -= horas * (1000 * 60 * 60);
+
+      const minutos = Math.floor(diff / (1000 * 60));
+      diff -= minutos * (1000 * 60);
+
+      const segundos = Math.floor(diff / 1000);
+
+      return { anos, meses, dias, horas, minutos, segundos };
+    }
+
+    // Função para atualizar o primeiro contador (data: 10/03/2023)
+    function atualizarContador1() {
+      const dataInicio1 = new Date("March 10, 2023 00:00:00");
+      const { anos, meses, dias, horas, minutos, segundos } = calcularDiferenca(dataInicio1);
+
+      document.getElementById("contador1").textContent =
+        `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
+    }
+
+    // Função para atualizar o segundo contador (data: 31/07/2022)
+    function atualizarContador2() {
+      const dataInicio2 = new Date("July 31, 2022 00:00:00");
+      const { anos, meses, dias, horas, minutos, segundos } = calcularDiferenca(dataInicio2);
+
+      document.getElementById("contador2").textContent =
+        `${anos} anos, ${meses} meses, ${dias} dias, ${horas} horas, ${minutos} minutos, ${segundos} segundos`;
+    }
+
+    // Atualiza os dois contadores a cada segundo
+    setInterval(atualizarContador1, 1000);
+    setInterval(atualizarContador2, 1000);
+
+    function criarCoracao() {
+      const coracao = document.createElement('div');
+      coracao.classList.add('heart');
+      
+      // Define a posição inicial aleatória
+      coracao.style.left = Math.random() * 100 + 'vw';
+      
+      // Define uma velocidade de queda aleatória
+      coracao.style.animationDuration = Math.random() * 3 + 2 + 's';
+
+      // Adiciona o coração ao body
+      document.body.appendChild(coracao);
+
+      // Remove o coração após a animação terminar
+      setTimeout(() => {
+        coracao.remove();
+      }, 5000);
+    }
+
+    // Cria um novo coração a cada 300ms
+    setInterval(criarCoracao, 200);
+      </script>
+
+</head>
+<body>
+    <div id="foto1">
+        <img src="imagens/foto-casal.jpeg" alt="foto casal" height="30%" width="30%" no-repeat>
+    </div>
+    <p>Juntos como namorados:</p>
+    <div id="contador1">0 anos, 0 meses, 0 dias, 0 horas, 0 minutos, 0 segundos</div>
+
+<hr>
+    <div id="foto2">
+        <img src="imagens/foto-inicio.jpg" alt="foto-inicio" height="30%" width="30%" no-repeat>
+    </div>
+    <p>Juntos desde a primeira ficada:</p>
+    <div id="contador2">0 anos, 0 meses, 0 dias, 0 horas, 0 minutos, 0 segundos</div>
+
+    <p></p>
+</body>
+</html>

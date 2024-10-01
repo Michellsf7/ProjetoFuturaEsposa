@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+body {
+    background-color: black;
+    color: white;
+}
+
+#foto1, #foto2 {
+    text-align: center;
+}
+p, #contador1, #contador2 {
+    text-align: center;
+}
+
+    /* Estilo do coração */
+    .heart {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        transform: rotate(45deg);
+        animation: fall linear infinite;
+      }
+  
+      /* Parte de cima do coração (circulo) */
+      .heart::before,
+      .heart::after {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 50%;
+      }
+  
+      .heart::before {
+        top: -10px;
+        left: 0;
+      }
+  
+      .heart::after {
+        top: 0;
+        left: -10px;
+      }
+  
+      @keyframes fall {
+        0% {
+          top: -10%;
+          opacity: 1;
+        }
+        100% {
+          top: 110%;
+          opacity: 0;
+        }
+      }
