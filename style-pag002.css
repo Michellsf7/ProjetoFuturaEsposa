@@ -22,13 +22,11 @@ p {
     color: rgba(128, 128, 128, 0.555);
 }
 
-hr {
-    width: 50%;
-    margin: 20px auto; /* Ajuste o valor conforme necessário
-    border: none; /* Remove a borda padrão */
-    height: 2px; /* Altura da linha */
-    background-color: white; /* Cor da linha */
-}
+@media (max-width: 600px) {
+    hr {
+        width: 50%; /* Ocupa 100% da largura em dispositivos móveis */
+        margin: 20px auto; /* Margem reduzida */
+    }
 
 
     /* Estilo do coração */
