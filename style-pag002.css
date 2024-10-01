@@ -22,9 +22,8 @@ p {
     color: rgba(128, 128, 128, 0.555);
 }
 
-@media (max-width: 600px) {
-    hr {
-        width: 50%; /* Ocupa 100% da largura em dispositivos móveis */
+hr {
+        width: 25%; /* Ocupa 100% da largura em dispositivos móveis */
         margin: 20px auto; /* Margem reduzida */
     }
 
