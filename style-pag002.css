@@ -5,7 +5,7 @@
     margin: 0px;
 }
 
-body {
+body, html {
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     color: white;
@@ -30,11 +30,12 @@ hr {
 
 div#dec {
     text-align: center;
-    
 }
 
-p#text {
-    text-align: justify;
+p#text{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
     color: white;
 }
 
