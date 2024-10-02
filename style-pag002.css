@@ -11,7 +11,12 @@ body, html {
     color: white;
 }
 
-#foto1, #foto2 {
+#foto1 {
+    padding-top: 20px;
+    text-align: center;
+}
+
+#foto2 {
     text-align: center;
 }
 #contador1, #contador2 {
