@@ -6,6 +6,7 @@
 }
 
 body {
+    font-family: Arial, Helvetica, sans-serif;
     background-color: black;
     color: white;
 }
@@ -26,6 +27,16 @@ hr {
         width: 25%; /* Ocupa 100% da largura em dispositivos móveis */
         margin: 20px auto; /* Margem reduzida */
     }
+
+div#dec {
+    text-align: center;
+    
+}
+
+p#text {
+    text-align: justify;
+    color: white;
+}
 
 
     /* Estilo do coração */
